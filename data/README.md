@@ -1,6 +1,5 @@
 # Data directory
 
-Keep large datasets outside version control. A typical local layout is:
 
 ```text
 data/
@@ -8,4 +7,3 @@ data/
 └── processed/    # derived splits, caches, or analysis outputs
 ```
 
-The repository `.gitignore` excludes these directories by default.

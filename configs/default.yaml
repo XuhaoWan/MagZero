@@ -15,8 +15,8 @@ num_after_skip: 2
 act: swish
 output_initializer: glorot_orthogonal
 lr: 0.0001
-batch_size: 2
-epochs: 100
+batch_size: 4
+epochs: 200
 use_fp16: false
 gradient_clip_val: 0.0
 log_memory: false
