@@ -1,0 +1,7 @@
+torch
+pytorch-lightning>=2.0
+torch-geometric
+scikit-learn
+pandas
+pyyaml
+wandb

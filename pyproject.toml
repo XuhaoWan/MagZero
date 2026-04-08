@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "magzero"
+version = "0.1.0"
+description = "Physics-informed graph learning for magnetic ground-state prediction."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch",
+  "pytorch-lightning>=2.0",
+  "torch-geometric",
+  "scikit-learn",
+  "pandas",
+  "pyyaml",
+  "wandb",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "ruff",
+  "black",
+  "isort",
+]
+
+[project.scripts]
+magzero-train = "magzero.cli.train:main"
+magzero-infer = "magzero.cli.inference:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
